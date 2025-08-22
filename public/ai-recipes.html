@@ -20,44 +20,47 @@
   </header>
 
   <main class="container">
-    <section class="hero">
-        <div class="hero-text">
-          <h1>AI Recipe Generator</h1>
-          <p>Enter the ingredients you have, and let our AI create a unique recipe just for you!</p>
-        </div>
-      </section>
+    <div class="ai-hero">
+        <h1 class="ai-title">AI Recipe Generator</h1>
+        <p class="ai-subtitle">Add your ingredients and watch the magic unfold into a delicious recipe made just for you.</p>
+    </div>
 
-    <section class="selector">
-      <h2>Your Ingredients</h2>
-      <div class="input-row">
-        <input id="productInput" class="text-input" type="text" placeholder="e.g., Chicken, Rice, Tomatoes" autocomplete="off" />
-        <button id="addBtn" class="btn primary" type="button">Add</button>
-      </div>
-      <ul id="selectedList" class="chip-list"></ul>
-    </section>
+    <div class="ai-workspace">
+      <div class="ai-controls">
+        <section class="selector ai-input-section">
+          <h2 class="ai-section-title">Your Ingredients</h2>
+          <div class="input-row">
+            <input id="productInput" class="text-input" type="text" placeholder="e.g., Chicken, Rice..." autocomplete="off" />
+            <button id="addBtn" class="btn primary" type="button">Add</button>
+          </div>
+          <ul id="selectedList" class="chip-list"></ul>
+        </section>
 
-    <section>
-      <div class="text-center my-8">
-        <button id="generateBtn" class="btn accent wide">
-          ✨ Generate Recipe
-        </button>
+        <section class="ai-actions">
+            <button id="generateBtn" class="btn primary generate-btn">
+              ✨ Generate Recipe
+            </button>
+        </section>
       </div>
-    
-      <div id="aiRecipeContainer" class="selector">
-        <div id="initialMessage" class="text-center muted">
-          Your generated recipe will appear here...
-        </div>
-        <div id="loader" class="loader-container">
-          <div class="loader"></div>
-          <p class="loader-text">Creating your recipe...</p>
-        </div>
-        <div id="recipeContent"></div>
+
+      <div class="ai-output">
+        <section id="aiRecipeContainer" class="selector ai-output-section">
+          <div id="initialMessage" class="muted text-center fade-in">
+            Your generated recipe will appear here...
+          </div>
+          <div id="loader" class="loader-container">
+            <div class="loader spoon"></div>
+            <p class="loader-text">Stirring up your recipe...</p>
+          </div>
+          <div id="recipeContent"></div>
+        </section>
       </div>
-    </section>
+    </div>
   </main>
-  
+
   <footer class="site-footer">
     <div class="container">
+      <hr class="footer-divider" />
       <p>Happy cooking with AI!</p>
     </div>
   </footer>
