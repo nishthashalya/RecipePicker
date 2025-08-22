@@ -1,18 +1,63 @@
-.text-center {
-    text-align: center;
-  }
-  .my-8 {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+.ai-container {
+    max-width: 800px; 
   }
   
+  .ai-hero {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  
+  .ai-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+  
+  .ai-subtitle {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  .ai-input-section {
+    padding: 2rem;
+  }
+  
+  .ai-section-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+  
+  .ai-actions {
+    text-align: center;
+    margin: 1.5rem 0;
+  }
+  
+  .generate-btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .generate-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+
+  .ai-output-section {
+    min-height: 150px;
+    padding: 2rem;
+  }
+
   .loader-container {
-    display: none; 
+    display: none; /* Hidden by default */
     justify-content: center;
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    color: var(--plum);
+    color: var(--muted-brown);
   }
   
   @keyframes spin { 
@@ -23,7 +68,7 @@
   
   .loader {
     animation: spin 1s linear infinite;
-    border-top: 4px solid var(--rose);
+    border-top: 4px solid var(--muted-brown);
     border-right: 4px solid transparent;
     border-radius: 50%;
     width: 3rem;
@@ -38,17 +83,25 @@
   #recipeContent h3 {
     font-size: 1.75rem;
     font-weight: 700;
-    color: var(--brown);
-    margin-bottom: 0.75rem;
+    text-align: center;
+    color: var(--black);
+    margin-bottom: 1rem;
+  }
+  
+  #recipeContent p {
+    text-align: center;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 2rem;
   }
   
   #recipeContent h4 {
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--plum);
+    color: var(--muted-brown);
     margin-top: 1.5rem;
     margin-bottom: 0.75rem;
-    border-bottom: 2px solid var(--rose);
+    border-bottom: 2px solid var(--light-beige);
     padding-bottom: 0.25rem;
   }
   
@@ -59,7 +112,11 @@
   }
   
   #recipeContent li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     line-height: 1.6;
+  }
+  
+  .text-center {
+    text-align: center;
   }
   
