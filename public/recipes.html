@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recipes</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">Recipe Picker</a>
+      <nav class="links">
+        <a class="active" href="recipes.html">Recipes</a>
+        <a href="favorites.html">Favorites</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="filters">
+      <div class="input-row">
+        <input id="searchInput" class="text-input" type="text" placeholder="Search recipes or ingredients" />
+        <select id="categorySelect" class="text-input">
+          <option value="">All categories</option>
+          <option>Beverages</option>
+          <option>Dairy</option>
+          <option>Snacks</option>
+          <option>Packaged</option>
+        </select>
+        <button id="clearFilters" class="btn outline" type="button">Clear</button>
+      </div>
+    </section>
+
+    <section aria-labelledby="recipesTitle">
+      <div class="section-head">
+        <h2 id="recipesTitle">Recipe ideas</h2>
+        <span id="countBadge" class="pill">0</span>
+      </div>
+      <div id="grid" class="grid"></div>
+      <div id="emptyState" class="empty hidden">
+        <p>No matching recipes. Try adding more items or remove filters.</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button id="closeModal" class="close-btn" aria-label="Close">×</button>
+      <img id="mImg" src="" alt="" class="detail-img" />
+      <h3 id="mTitle"></h3>
+      <p id="mCategory" class="muted"></p>
+      <div id="mIngredients" class="ing-list"></div>
+      <p id="mSteps"></p>
+      <div id="mNutrition" class="nutrition"></div>
+      <button id="mFav" class="btn primary">Add to favorites</button>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Happy cooking <3 </p>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/recipes.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/recipes_page.js"></script>
+</body>
+</html>

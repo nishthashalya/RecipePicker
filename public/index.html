@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recipe Picker</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">Recipe Picker</a>
+      <nav class="links">
+        <a href="recipes.html">Recipes</a>
+        <a href="favorites.html">Favorites</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Pick your products and discover recipes</h1>
+        <p>Use ingredients you have at home to discover recipes</p>
+      </div>
+      <div class="hero-card">
+        <img src="images/hero.jpg" alt="Sunset food theme" />
+      </div>
+    </section>
+
+    <section class="selector">
+      <h2>Add products you have</h2>
+      <div class="input-row">
+        <input id="productInput" class="text-input" type="text" placeholder="Type a product" list="productSuggestions" autocomplete="off" />
+        <datalist id="productSuggestions"></datalist>
+        <button id="addBtn" class="btn primary" type="button">Add</button>
+        <button id="clearBtn" class="btn outline" type="button">Clear</button>
+        <a id="goRecipes" class="btn accent" href="recipes.html">See recipes</a>
+      </div>
+      <ul id="selectedList" class="chip-list"></ul>
+    </section>
+
+    <section class="categories">
+      <h2>Browse categories</h2>
+      <div class="cat-grid">
+        <a class="cat-card" data-cat="Beverages" href="recipes.html?cat=Beverages">
+          <span>Beverages</span>
+        </a>
+        <a class="cat-card" data-cat="Dairy" href="recipes.html?cat=Dairy">
+          <span>Dairy</span>
+        </a>
+        <a class="cat-card" data-cat="Snacks" href="recipes.html?cat=Snacks">
+          <span>Snacks</span>
+        </a>
+        </div>
+    </section>
+
+    <section class="surprise">
+      <button id="surpriseBtn" class="btn wide">Surprise me</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Made for fun recipes discovery</p>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/recipes.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
