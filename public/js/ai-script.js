@@ -76,7 +76,7 @@ async function getAiRecipe() {
     let chatHistory = [];
     chatHistory.push({ role: "user", parts: [{ text: prompt }] });
     const payload = { contents: chatHistory };
-    const apiKey = "AIzaSyCbYrvFPP2wAnnYrTmCDAIx4bYN3grkPR0"; 
+    const apiKey = "AIzaSyCRLN282vZ2h4bJ6nB9pI6UeG6rpgZqEDE"; 
     const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
     
     const response = await fetch(apiUrl, {
@@ -111,3 +111,4 @@ async function getAiRecipe() {
   }
 }
 renderChips();
+
