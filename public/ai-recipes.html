@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Recipe Generator</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/ai-style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">Smart Recipe Picker</a>
+      <nav class="links">
+        <a href="recipes.html">Recipes</a>
+        <a class="active" href="ai-recipes.html">AI Recipes</a>
+        <a href="favorites.html">Favorites</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+        <div class="hero-text">
+          <h1>AI Recipe Generator</h1>
+          <p>Enter the ingredients you have, and let our AI create a unique recipe just for you!</p>
+        </div>
+      </section>
+
+    <section class="selector">
+      <h2>Your Ingredients</h2>
+      <div class="input-row">
+        <input id="productInput" class="text-input" type="text" placeholder="e.g., Chicken, Rice, Tomatoes" autocomplete="off" />
+        <button id="addBtn" class="btn primary" type="button">Add</button>
+      </div>
+      <ul id="selectedList" class="chip-list"></ul>
+    </section>
+
+    <section>
+      <div class="text-center my-8">
+        <button id="generateBtn" class="btn accent wide">
+          ✨ Generate Recipe
+        </button>
+      </div>
+    
+      <div id="aiRecipeContainer" class="selector">
+        <div id="initialMessage" class="text-center muted">
+          Your generated recipe will appear here...
+        </div>
+        <div id="loader" class="loader-container">
+          <div class="loader"></div>
+          <p class="loader-text">Creating your recipe...</p>
+        </div>
+        <div id="recipeContent"></div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="site-footer">
+    <div class="container">
+      <p>Happy cooking with AI!</p>
+    </div>
+  </footer>
+
+  <script src="js/ai-script.js"></script>
+</body>
+</html>
